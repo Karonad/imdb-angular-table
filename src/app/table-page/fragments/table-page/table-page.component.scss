@@ -1,0 +1,21 @@
+.container{ 
+    padding: 15%;
+}
+
+h1{
+    text-align: center;
+    font-size: xx-large;
+    padding-bottom: 5%;
+}
+
+.filters{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+    .filters{
+        flex-direction: column;
+        justify-content: center;
+    }
+}

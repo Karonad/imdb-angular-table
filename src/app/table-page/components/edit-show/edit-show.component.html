@@ -1,0 +1,14 @@
+<h3>Modification de l'élément</h3>
+<mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Titre</mat-label>
+    <input matInput type="text" [(ngModel)]="data.originalTitle">
+  </mat-form-field>
+<mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Année</mat-label>
+    <input matInput type="text" [(ngModel)]="data.startYear">
+  </mat-form-field>
+<mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Genre</mat-label>
+    <input matInput type="text" [(ngModel)]="data.genres">
+  </mat-form-field>
+  <button [mat-dialog-close]="data" mat-raised-button color="primary">Valider</button>

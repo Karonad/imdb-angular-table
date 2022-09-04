@@ -1,0 +1,8 @@
+<div class="container">
+    <h1>Find a movie</h1>
+    <div class="filters">
+        <app-search-bar [selectedCriteria]="selectedCriteria" (selectedCriteriaChange)="search($event)"></app-search-bar>
+        <app-filter [years]="years" (selectedYear)="filterByYear($event);selectedCriteria=''"></app-filter>
+    </div>
+    <app-table [data]="movies" (dataChange)="updateData($event)" ></app-table>
+</div>
