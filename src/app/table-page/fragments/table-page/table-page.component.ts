@@ -19,6 +19,8 @@ export class TablePageComponent {
     this.http.get('./assets/data.json').subscribe((data: any) => {
       this.data = data as Movie[];
       this.movies = this.data;
+
+      // Define the value available for the filter in descending order
       for (const element of data) {
         if (!this.years.includes(element.startYear)) {
           this.years.push(element.startYear);
@@ -41,6 +43,7 @@ export class TablePageComponent {
   search(criteria: any): void { 
     this.selectedCriteria = criteria.toLowerCase();
 
+    // Reset data if no criteria
     if(this.selectedCriteria == '') {
       if (this.selectedYear) {
         this.filterByYear(this.selectedYear);
@@ -51,6 +54,7 @@ export class TablePageComponent {
       }
     }
 
+    // Check if data is filtered by year and filter with input criteria
     if (this.selectedYear) {
       this.filterByYear(this.selectedYear);
       this.movies = this.movies.filter(
